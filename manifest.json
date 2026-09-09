@@ -1,0 +1,21 @@
+{
+  "name": "ابزارک - مجموعه ابزارهای آفلاین",
+  "short_name": "ابزارک",
+  "description": "مجموعه‌ای از ابزارهای سریع و کاملاً آفلاین برای تولید نام، رمز عبور، نام کاربری، ایمیل، کد و UUID.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "fa",
+  "dir": "rtl",
+  "background_color": "#F5F6F9",
+  "theme_color": "#5B4DE0",
+  "icons": [
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
