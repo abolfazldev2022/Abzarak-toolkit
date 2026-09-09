@@ -21,9 +21,13 @@
 ## 📸 پیش‌نمایش
 
 ![Dashboard](docs/screenshots/dashboard.png)
+
 ![Dark Mode](docs/screenshots/dark-mode.png)
-![Dashboard](docs/screenshots/mobile.png)
+
 ![Dark Mode](docs/screenshots/password-generator.png)
+
+![Dashboard](docs/screenshots/mobile.png)
+
 
 ---
 
