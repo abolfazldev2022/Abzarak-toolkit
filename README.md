@@ -20,33 +20,10 @@
 
 ## 📸 پیش‌نمایش
 
-> **یادداشت:** این ریپازیتوری هنوز اسکرین‌شات ندارد. تصاویر زیر placeholder هستند تا وقتی خودتان آن‌ها را اضافه کنید، لینک‌ها به‌طور خودکار فعال شوند.
-
-برای افزودن پیش‌نمایش واقعی، پوشهٔ زیر را در ریشهٔ پروژه بسازید و تصاویر را داخل آن قرار دهید:
-
-```
-docs/
-└── screenshots/
-    ├── dashboard.png
-    ├── dark-mode.png
-    ├── password-generator.png
-    └── mobile.png
-```
-
-نحوهٔ گرفتن اسکرین‌شات‌ها (بدون تغییر در کد پروژه):
-
-1. `index.html` را در مرورگر باز کنید (یا با `python -m http.server` سرو کنید).
-2. صفحهٔ «خانه» را در حالت روشن اسکرین‌شات بگیرید → `dashboard.png`
-3. از تنظیمات، پوسته را به «تاریک» تغییر دهید و دوباره از خانه اسکرین‌شات بگیرید → `dark-mode.png`
-4. به صفحهٔ «رمز عبور» بروید و اسکرین‌شات بگیرید → `password-generator.png`
-5. ابزارهای مرورگر (DevTools) را در حالت موبایل (مثلاً iPhone 12) باز کنید و از صفحهٔ خانه اسکرین‌شات بگیرید → `mobile.png`
-
-پس از افزودن فایل‌ها، این بخش را با تصاویر واقعی جایگزین کنید، مثلاً:
-
-```markdown
 ![Dashboard](docs/screenshots/dashboard.png)
 ![Dark Mode](docs/screenshots/dark-mode.png)
-```
+![Dashboard](docs/screenshots/mobile.png)
+![Dark Mode](docs/screenshots/password-generator.png)
 
 ---
 
