@@ -1,0 +1,92 @@
+/* =========================================================================
+   ابزارک — responsive.css
+   Breakpoints: ~1024px (tablet), ~768px (small tablet / large phone),
+   ~430px and ~375px (phones).
+   ========================================================================= */
+
+/* ---- Tablet: collapse generator side panel under content ---------------- */
+@media (max-width: 1024px) {
+  .generator {
+    grid-template-columns: 1fr;
+  }
+  .content { padding: 20px 20px 100px; }
+}
+
+/* ---- Small tablet / large phone: sidebar becomes an off-canvas drawer --- */
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 40;
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+    box-shadow: var(--shadow-md);
+  }
+  .sidebar.is-open { transform: translateX(0); }
+
+  .sidebar-overlay.is-open { display: block; }
+
+  .topbar { padding: 14px 16px; }
+  .content { padding: 16px 16px 96px; }
+
+  .card-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+
+  /* Bottom navigation replaces desktop sidebar nav for quick access */
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 30;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+    justify-content: space-around;
+  }
+  .bottom-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 10.5px;
+    padding: 6px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    min-width: 56px;
+  }
+  .bottom-nav__item svg { width: 20px; height: 20px; }
+  .bottom-nav__item.is-active { color: var(--primary); }
+}
+
+/* ---- Phones --------------------------------------------------------------- */
+@media (max-width: 430px) {
+  .topbar__title { font-size: 16px; }
+  .hero { padding: 20px; }
+  .hero__title { font-size: 19px; }
+  .panel { padding: 16px; }
+  .card-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tool-card { padding: 14px; }
+  .quick-generate { flex-direction: column; }
+  .quick-generate .btn { width: 100%; }
+  .result-card__value { font-size: 18px; }
+  .result-card__value.is-mono { font-size: 15.5px; }
+  .modal { padding: 20px; }
+  .history-item { flex-wrap: wrap; }
+}
+
+@media (max-width: 375px) {
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Ensure touch targets stay comfortable everywhere on touch devices -- */
+@media (hover: none) and (pointer: coarse) {
+  .btn, .icon-btn, .nav__item, .chip, .segmented__btn { min-height: 44px; }
+  .checkbox-row, .radio-row { padding-top: 12px; padding-bottom: 12px; }
+}
